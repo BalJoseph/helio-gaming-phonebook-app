@@ -1,0 +1,11 @@
+
+<form>
+    <input type="text" placeholder="Fitler by name" #filter (keyup)="filterContacts(filter.value)">
+</form>
+
+@for (contact of filteredContactList; track contact.id) {
+    <article>
+        <a [routerLink]="['/details', contact.id]">{{contact.name}}</a>
+    </article>
+}
+<a routerLink="add">Add</a>

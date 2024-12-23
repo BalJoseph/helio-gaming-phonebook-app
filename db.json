@@ -1,0 +1,70 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Jake Turner",
+      "mobile": 99534865,
+      "email": "jaketurner@gmail.com",
+      "notes": "Auditor"
+    },
+    {
+      "id": "2",
+      "name": "Daniel Costa",
+      "mobile": 79775543,
+      "address": "56, Triq L-Imghallem, Victoria, Gozo"
+    },
+    {
+      "id": "3",
+      "name": "James Despott",
+      "mobile": 77553821,
+      "address": "106, Triq Il-Marfa, Ghadira Bay, Mellieha, Malta",
+      "email": "jamesdespott@live.com",
+      "notes": "Managing directory"
+    },
+    {
+      "id": "4",
+      "name": "Sebestjan Barra",
+      "mobile": 98164375,
+      "email": "sbarra@hotmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Baldassar Valenti",
+      "mobile": 79900322,
+      "address": "24, Triq Iz-Zejtun, Birzebbuga, Malta",
+      "notes": "Mechanic"
+    },
+    {
+      "id": "6",
+      "name": "Filippu Bellizzi",
+      "mobile": 77444666,
+      "email": "bellizzi70@outlook.com"
+    },
+    {
+      "id": "7",
+      "name": "Gavino Pisani",
+      "mobile": 99007543,
+      "address": "220, Triq L-Imdina, Hal Qormi, Malta",
+      "email": "gavinopisani@gmail.com"
+    },
+    {
+      "id": "8",
+      "name": "Bert Latteo",
+      "mobile": 98119485,
+      "notes": "Friend from university"
+    },
+    {
+      "id": "9",
+      "name": "Kai Susani",
+      "mobile": 98345327,
+      "email": "kaisus@outlook.com"
+    },
+    {
+      "id": "10",
+      "name": "Gabriel Amore",
+      "mobile": 79893634,
+      "address": "171, Triq Melita, Valletta, Malta",
+      "notes": "Journalist"
+    }
+  ]
+}

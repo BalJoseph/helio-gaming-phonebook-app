@@ -1,0 +1,32 @@
+<article>
+    <a routerLink="">Back</a>
+    @if(!contact){
+        <p>Contact not found.</p>
+    } 
+    <h2>{{contact?.name}}</h2>
+    @if(contact !== undefined){
+        <button (click)="deleteContact(contact.id)">Delete</button>
+        <button (click)="editContact(contact.id)">Edit</button>
+    }
+    
+    <section>
+        Contact info
+        <ul>
+            <li>Mobile {{contact?.mobile}}</li>
+            @if(contact?.email){
+                <li>Email {{contact?.email}}</li>
+            }
+            @if(contact?.address){
+                <li>Address {{contact?.address}}</li>
+            }
+        </ul>
+    </section>
+    @if(contact?.notes){
+        <section>
+            <p>
+                Notes <br />
+                {{contact?.notes}}
+            </p>
+        </section>
+    }
+</article>

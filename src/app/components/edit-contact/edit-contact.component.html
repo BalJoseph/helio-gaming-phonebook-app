@@ -1,0 +1,27 @@
+<div>
+    <a routerLink="">Cancel</a>
+    Edit contact
+
+    @if(errorMessage()){
+        <p>{{errorMessage()}}</p>
+    }
+
+    <form [formGroup]="editForm" (submit)="editContact()">
+        <label for="name">Name*</label>
+        <input id="name" type="text" formControlName="name"/>
+
+        <label for="mobile">Mobile*</label>
+        <input id="mobile" type="number" formControlName="mobile"/>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email"/>
+
+        <label for="address">Address</label>
+        <textarea id="address" formControlName="address" rows="4" cols="50"></textarea>
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" formControlName="notes" rows="4" cols="50"></textarea>
+
+        <button type="submit">Edit</button>
+    </form>
+</div>
