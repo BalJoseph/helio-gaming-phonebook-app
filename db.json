@@ -19,7 +19,7 @@
       "mobile": 77553821,
       "address": "106, Triq Il-Marfa, Ghadira Bay, Mellieha, Malta",
       "email": "jamesdespott@live.com",
-      "notes": "Managing directory"
+      "notes": "Managing director"
     },
     {
       "id": "4",
@@ -51,7 +51,9 @@
       "id": "8",
       "name": "Bert Latteo",
       "mobile": 98119485,
-      "notes": "Friend from university"
+      "notes": "Friend from university",
+      "email": "berlatteo@live.com",
+      "address": ""
     },
     {
       "id": "9",

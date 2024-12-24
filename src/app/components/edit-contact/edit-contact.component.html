@@ -1,27 +1,45 @@
-<div>
-    <a routerLink="">Cancel</a>
-    Edit contact
+<div class="container d-flex flex-column py-2">
+    <h2 class="mb-3">Edit contact</h2>    
 
-    @if(errorMessage()){
-        <p>{{errorMessage()}}</p>
-    }
+   
 
     <form [formGroup]="editForm" (submit)="editContact()">
-        <label for="name">Name*</label>
-        <input id="name" type="text" formControlName="name"/>
 
-        <label for="mobile">Mobile*</label>
-        <input id="mobile" type="number" formControlName="mobile"/>
+        @if(errorMessage()){
+            <div class="alert alert-danger pre-line">{{errorMessage()}}</div>
+        }
 
-        <label for="email">Email</label>
-        <input id="email" type="email" formControlName="email"/>
+        <div class="mb-3">
+            <label class="form-label" for="name">Name*</label>
+            <input class="form-control" id="name" type="text" formControlName="name"/>
+        </div>
 
-        <label for="address">Address</label>
-        <textarea id="address" formControlName="address" rows="4" cols="50"></textarea>
+        <div class="mb-3">
+            <label class="form-label" for="mobile">Phone number*</label>
+            <input class="form-control" id="mobile" type="number" formControlName="mobile"/>
+        </div>
 
-        <label for="notes">Notes</label>
-        <textarea id="notes" formControlName="notes" rows="4" cols="50"></textarea>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-control" id="email" type="email" formControlName="email"/>
+        </div>
 
-        <button type="submit">Edit</button>
+        <div class="mb-3">
+            <label class="form-label" for="address">Address</label>
+            <textarea class="form-control" id="address" formControlName="address" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="notes">Notes</label>
+            <textarea class="form-control" id="notes" formControlName="notes" rows="4" cols="50"></textarea>
+        </div>
+
+
+        <div class="my-2 d-flex justify-content-between">
+            <a class="btn btn-secondary" routerLink="">
+                Cancel
+            </a>
+            <button class="btn btn-primary" type="submit">Edit</button>
+        </div>
     </form>
 </div>

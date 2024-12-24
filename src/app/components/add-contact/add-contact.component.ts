@@ -35,7 +35,7 @@ export class AddContactComponent {
 
 		let mobileNo = Number(this.addForm.value.mobile);
 		if(mobileNo === 0 || mobileNo > 9999_9999 || mobileNo < 1000_0000){
-			message += "Mobile number needs to be 8 digits.\n"
+			message += "Phone number needs to be 8 digits.\n"
 		}
 
 		if(message){

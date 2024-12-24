@@ -1,28 +1,44 @@
-<div>
-    <a routerLink="">Cancel</a>
-    Create contact
-    <a routerLink="">Save</a>
-
-    @if(errorMessage()){
-        <p>{{errorMessage()}}</p>
-    }
+<div class="container d-flex flex-column py-2">
+    <h2 class="mb-3">Create contact</h2>
 
     <form [formGroup]="addForm" (submit)="saveContact()">
-        <label for="name">Name*</label>
-        <input id="name" type="text" formControlName="name"/>
+        @if(errorMessage()){
+            <div class="alert alert-danger pre-line">{{errorMessage()}}</div>
+        }
 
-        <label for="mobile">Mobile*</label>
-        <input id="mobile" type="number" formControlName="mobile"/>
+        <div class="mb-3">
+            <label class="form-label" for="name">Name*</label>
+            <input class="form-control" id="name" type="text" formControlName="name"/>
+        </div>
 
-        <label for="email">Email</label>
-        <input id="email" type="email" formControlName="email"/>
+        <div class="mb-3">
+            <label class="form-label" for="mobile">Phone number*</label>
+            <input class="form-control" id="mobile" type="number" formControlName="mobile"/>
+        </div>
 
-        <label for="address">Address</label>
-        <textarea id="address" formControlName="address" rows="4" cols="50"></textarea>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-control" id="email" type="email" formControlName="email"/>
+        </div>
 
-        <label for="notes">Notes</label>
-        <textarea id="notes" formControlName="notes" rows="4" cols="50"></textarea>
+        <div class="mb-3">
+            <label class="form-label" for="address">Address</label>
+            <textarea class="form-control" id="address" formControlName="address" rows="4" cols="50"></textarea>
+        </div>
 
-        <button type="submit">Create</button>
+        <div class="mb-3">
+            <label class="form-label" for="notes">Notes</label>
+            <textarea class="form-control" id="notes" formControlName="notes" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="my-2 d-flex justify-content-between">
+            <a routerLink="">
+                <button class="btn btn-secondary">
+                    Cancel
+                </button>
+            </a>
+            <button class="btn btn-primary" type="submit">Create</button>
+        </div>
+        
     </form>
 </div>

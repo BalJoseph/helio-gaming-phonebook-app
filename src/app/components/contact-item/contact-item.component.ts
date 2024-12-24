@@ -23,6 +23,7 @@ export class ContactItemComponent {
     this.contactService.getContactById(contactId).pipe(
           catchError(err => {
             console.error(err);
+            this.router.navigate([""]);
             throw err;
           })
         ).subscribe(contact => {

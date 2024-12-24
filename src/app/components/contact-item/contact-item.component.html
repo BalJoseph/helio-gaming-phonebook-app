@@ -1,32 +1,42 @@
-<article>
-    <a routerLink="">Back</a>
+<article class="container p-2">
+    
+    <a class="mb-3 btn btn-primary" routerLink="">Back</a> 
+    
+    <h2 class="mb-3">{{contact?.name}}</h2>
+
     @if(!contact){
-        <p>Contact not found.</p>
-    } 
-    <h2>{{contact?.name}}</h2>
-    @if(contact !== undefined){
-        <button (click)="deleteContact(contact.id)">Delete</button>
-        <button (click)="editContact(contact.id)">Edit</button>
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    }@else {
+        <section class="p-2">
+            <ul class="list-group">
+                <li class="list-group-item lead bold">Contact info</li>
+                <li class="list-group-item"><span class="bold-light">Phone number</span> {{contact.mobile}}</li>
+                @if(contact.email){
+                    <li class="list-group-item"><span class="bold-light">Email address</span> {{contact.email}}</li>
+                }
+                @if(contact.address){
+                    <li class="list-group-item"><span class="bold-light">Address</span> {{contact.address}}</li>
+                }
+            </ul>
+        </section>
+        @if(contact.notes){
+            <section class="p-2">
+                <ul class="list-group">
+                    <li class="list-group-item lead bold">Notes</li>
+                    <li class="list-group-item">{{contact.notes}}</li>
+                </ul>
+            </section>
+        }
+    
+        @if(contact !== undefined){
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-primary" (click)="editContact(contact.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteContact(contact.id)">Delete</button>
+            </div>
+        }
     }
     
-    <section>
-        Contact info
-        <ul>
-            <li>Mobile {{contact?.mobile}}</li>
-            @if(contact?.email){
-                <li>Email {{contact?.email}}</li>
-            }
-            @if(contact?.address){
-                <li>Address {{contact?.address}}</li>
-            }
-        </ul>
-    </section>
-    @if(contact?.notes){
-        <section>
-            <p>
-                Notes <br />
-                {{contact?.notes}}
-            </p>
-        </section>
-    }
+    
 </article>
